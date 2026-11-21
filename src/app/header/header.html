@@ -1,5 +1,14 @@
-@if (showTitle) {
+@if (showTitle()) {
+  <h1>{{ title() }}</h1>
+}
+<button (click)="rename()">Renommer</button>
+<button [disabled]="!canDelete()" (click)="delete()">Supprimer</button>
+
+
+
+
+<!--@if (showTitle) {
   <h1>{{ title }}</h1>
 }
 <button (click)="rename()">Renommer</button>
-<button [disabled]="!canDelete" (click)="delete()">Supprimer</button>
+<button [disabled]="!canDelete" (click)="delete()">Supprimer</button>   !-->    
