@@ -1,14 +1,7 @@
-@if (showTitle()) {
-  <h1>{{ title() }}</h1>
-}
-<button (click)="rename()">Renommer</button>
-<button [disabled]="!canDelete()" (click)="delete()">Supprimer</button>
+<h1>Ma Boutique</h1>
 
-
-
-
-<!--@if (showTitle) {
-  <h1>{{ title }}</h1>
-}
-<button (click)="rename()">Renommer</button>
-<button [disabled]="!canDelete" (click)="delete()">Supprimer</button>   !-->    
+<div class="panier">
+  Panier : {{ panier.count() }} article(s) |
+  Total : {{ panier.total() | currency:'EUR' }}
+  <button (click)="panier.vider()">Vider</button>
+</div>

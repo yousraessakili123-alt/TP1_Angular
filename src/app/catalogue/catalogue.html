@@ -1,0 +1,10 @@
+<h2>Catalogue</h2>
+
+@for (p of produits; track p.id) {
+  <app-product-card [product]="p" />
+}
+
+<hr>
+<p>Panier : {{ panier.count() }} article(s)</p>
+<p>Total : {{ panier.total() | currency:'EUR' }}</p>
+<button (click)="panier.vider()">Vider le panier</button>

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
 import { Header } from './header/header';
-import { TaskList } from './task-list/task-list';
+import { Aside } from './aside/aside';
+import { Footer } from './footer/footer';
+import { Catalogue } from './catalogue/catalogue';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, Header, TaskList],
+  imports: [Header, Aside, Footer, Catalogue],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

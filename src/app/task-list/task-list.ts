@@ -6,7 +6,7 @@ import { DatePipe, UpperCasePipe } from '@angular/common';
   imports: [DatePipe, UpperCasePipe],
   templateUrl: './task-list.html',
   styleUrl: './task-list.css',
-})
+})    
 export class TaskList {
   tasks = signal([
     { id: 0, title: 'Lire le cours Angular', dueDate: '2026-11-13' },
